@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  font-family: "Montserrat", sans-serif;
+  background: url("https://i.pinimg.com/originals/e0/c4/74/e0c4745ee07489804c3ac7bafec89d45.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.input__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 999px;
+  background: white;
+  padding: 0.5vh 1vw;
+  opacity: 0.8;
+  input {
+    outline: none;
+    border: none;
+    width: 95%;
+    background: none;
+    text-align: center;
+    font-size: 2rem;
+  }
+  button {
+    border: none;
+    font-size: 2rem;
+    background: white;
+  }
+}
+
+.input__container:hover,
+.input__container:active {
+  border-color: #751c4c;
+  opacity: 1;
+}
+
+.bodyApp__main {
+  min-width: 60vw;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bodyApp__title {
+  text-transform: uppercase;
+  padding: 5vh;
+  padding-bottom: 1vh;
+  border-bottom: 3px solid rgb(144, 121, 90);
+  text-shadow: 2px 2px 4px #ffffff;
+}
+
+.bodyApp__subtitle {
+  color: #751c4c;
+}
+
+.card {
+  background: white;
+  min-height: 20vh;
+  min-width: 10vw;
+  padding: 2rem;
+  border-radius: 5%;
+}
+
+.forecast__container {
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5vw;
+  min-width: 60vw;
+}
+
+.forecast__btn {
+  border: none;
+  border-radius: 15%;
+  outline: none;
+  flex: 1;
+  max-height: 10vh;
+  font-size: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  background: white;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.forecast__btn:hover {
+  transform: scale(1.01);
+}
+
+.forecast__btn:active {
+  transform: scale(1.005);
+  color: #751c4c;
+}
+
+.switch__container {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 570px) {
+  .bodyApp__header {
+    text-align: center;
+  }
+  .bodyApp__title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .forecast__btn {
+    font-size: 1.5rem;
+  }
+  .input__container {
+    padding-left: 6vw;
+  }
+
+  .switch__container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .forecast__container {
+    flex-direction: column;
+  }
+  .bodyApp__main {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin: 3vh 0;
+  }
+
+  .input__container {
+    padding-left: 3vw;
+  }
+}

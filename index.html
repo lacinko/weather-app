@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header class="bodyApp__header">
+      <h2>Welcome to weather application, please select your location!</h2>
+      <div class="input__container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"
+          />
+        </svg>
+        <input type="text" id="location-input" value="" />
+      </div>
+    </header>
+    <h1 class="bodyApp__title">
+      Weather in <span data-city></span> from
+      <span data-date></span>
+    </h1>
+    <div class="switch__container">
+      <label for=""
+        ><input type="radio" name="unit" id="cel" checked /> Metric
+        system</label
+      >
+      <label for=""
+        ><input type="radio" name="unit" id="fah" /> Imperial system</label
+      >
+    </div>
+    <main class="bodyApp__main">
+      <div class="bodyApp_location card">
+        <h2 class="bodyApp__subtitle">Location</h2>
+        <h3>City: <span data-city></span></h3>
+        <h3>Region: <span data-region></span></h3>
+        <h3>Country: <span data-country></span></h3>
+      </div>
+      <div class="bodyApp__temperatures card">
+        <h2 class="bodyApp__subtitle">Temperatures</h2>
+        <h3>Current Temperature: <span data-temp></span></h3>
+        <h3>Feels like Temperature: <span data-feels-temp></span></h3>
+      </div>
+      <div class="bodyApp__weatherProperties card">
+        <h2 class="bodyApp__subtitle">Wheather Properties</h2>
+        <h3>Wind: <span data-wind></span></h3>
+        <h3>UV Index: <span data-uv></span></h3>
+        <h3>Humidity: <span data-humidity></span></h3>
+      </div>
+    </main>
+    <button class="forecast__btn">Show forecast</button>
+    <div
+      class="forecast__container"
+      style="visibility: hidden; height: 0px; overflow: hidden"
+    >
+      <div class="card" data-card>
+        <h2 class="bodyApp__subtitle">
+          Day <br />
+          <span data-day></span>
+        </h2>
+        <h3><span data-condition></span></h3>
+        <img src="" alt="icon" data-icon />
+        <h3>Max Temperature: <span data-maxTemp></span></h3>
+        <h3>Min Temperature: <span data-minTemp></span></h3>
+        <h3>Wind: <span data-avgWind></span></h3>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>
