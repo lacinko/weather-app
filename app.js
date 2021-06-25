@@ -1,7 +1,7 @@
 const API_KEY = "2c2af416266d43878bb165611211702";
 let currentLocation = "Prague";
 let isLoading = true;
-let API_LINK = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${currentLocation}&days=10`;
+let API_LINK = `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${currentLocation}&days=10`;
 
 const inputElement = document.querySelector("#location-input");
 
